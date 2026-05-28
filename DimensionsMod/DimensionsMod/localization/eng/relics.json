@@ -1,3 +1,10 @@
 {
-  
+    "DIMENSIONSMOD-RED_GIANT.description": "At the start of each combat, draw [blue]1[/blue] additional card and [gold]Exhaust[/gold] a random card in your hand.",
+    "DIMENSIONSMOD-RED_GIANT.flavor": "A dying star, swollen with unstable power.",
+    "DIMENSIONSMOD-RED_GIANT.title": "Red Giant",
+
+    "DIMENSIONSMOD-BLACK_HOLE.description": "At the start of each combat, draw [blue]2[/blue] additional cards and choose a card in your hand to [gold]Play[/gold] and [gold]Exhaust[/gold].",
+    "DIMENSIONSMOD-BLACK_HOLE.flavor": "You can use it to eat your garbage.",
+    "DIMENSIONSMOD-BLACK_HOLE.title": "Black Hole"
+    
 }

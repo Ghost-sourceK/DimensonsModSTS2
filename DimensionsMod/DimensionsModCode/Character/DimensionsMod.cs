@@ -1,11 +1,11 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Utils.NodeFactories;
+using DimensionsMod.DimensionsModCode.Cards.Basic;
 using DimensionsMod.DimensionsModCode.Extensions;
+using DimensionsMod.DimensionsModCode.Relics;
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Cards;
-using MegaCrit.Sts2.Core.Models.Relics;
 
 namespace DimensionsMod.DimensionsModCode.Character;
 
@@ -13,29 +13,29 @@ public class DimensionsMod : PlaceholderCharacterModel
 {
     public const string CharacterId = "DimensionsMod";
 
-    public static readonly Color Color = new("ffffff");
+    public static readonly Color Color = new("7030b0");
 
     public override Color NameColor => Color;
     public override CharacterGender Gender => CharacterGender.Neutral;
-    public override int StartingHp => 70;
+    public override int StartingHp => 65;
 
     public override IEnumerable<CardModel> StartingDeck =>
     [
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>()
+        ModelDb.Card<GalacticStrike>(),
+        ModelDb.Card<GalacticStrike>(),
+        ModelDb.Card<GalacticStrike>(),
+        ModelDb.Card<GalacticStrike>(),
+        ModelDb.Card<GalacticDefend>(),
+        ModelDb.Card<GalacticDefend>(),
+        ModelDb.Card<GalacticDefend>(),
+        ModelDb.Card<GalacticDefend>(),
+        ModelDb.Card<PlasmaReserve>(),
+        ModelDb.Card<CosmicDarkness>()
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
     [
-        ModelDb.Relic<BurningBlood>()
+        ModelDb.Relic<RedGiant>()
     ];
 
     public override CardPoolModel CardPool => ModelDb.CardPool<DimensionsModCardPool>();

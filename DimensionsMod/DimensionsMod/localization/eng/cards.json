@@ -1,3 +1,32 @@
 {
+  "DIMENSIONSMOD-GALACTIC_STRIKE.description": "Deal {Damage:diff()} damage.",
+  "DIMENSIONSMOD-GALACTIC_STRIKE.title": "Strike",
+
+  "DIMENSIONSMOD-GALACTIC_DEFEND.description": "Gain {Block:diff()} [gold]Block[/gold].",
+  "DIMENSIONSMOD-GALACTIC_DEFEND.title": "Defend",
+
+  "DIMENSIONSMOD-COSMIC_DARKNESS.description": "[gold]Void[/gold]{IfUpgraded:show: {Cards:diff()}|}.\nDeal {Damage:diff()} damage.",
+  "DIMENSIONSMOD-COSMIC_DARKNESS.title": "Cosmic Darkness",
   
+  "DIMENSIONSMOD-PLASMA_RESERVE.description": "[gold]Void[/gold].\nGain {Block:diff()} [gold]Block[/gold].",
+  "DIMENSIONSMOD-PLASMA_RESERVE.title": "Plasma Reserve",
+
+
+
+
+  "DIMENSIONSMOD-COSMIC_EXOPLANET.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Exhume[/gold].",
+  "DIMENSIONSMOD-EXHAUST_SELECT_PROMPT": "Choose a card from the Exhaust pile",
+  "DIMENSIONSMOD-COSMIC_EXOPLANET.title": "Cosmic Exoplanet",
+
+  "DIMENSIONSMOD-PLASMA_RELEASE.description": "[gold]Void[/gold].\nGain {Block:diff()} [gold]Block[/gold].\n[gold]Exhaust[/gold].",
+  "DIMENSIONSMOD-PLASMA_RELEASE.title": "Plasma Release",
+
+  "DIMENSIONSMOD-COSMIC_ARMORY.description": "Deal {Damage:diff()} damage.\nWhen {IfUpgraded:show:[gold]Exhausted[/gold] or [gold]Purged[/gold].|[gold]Consumed[/gold]}, [gold]Upgrade[/gold] ALL cards in your hand for the rest of the combat.",
+  "DIMENSIONSMOD-COSMIC_ARMORY.title": "Cosmic Armory",
+
+
+
+
+  "DIMENSIONSMOD-DARK_DESTROYER.description": "Deal {Damage:diff()} damage.\nThe next [gold]Plasma[/gold] or [gold]Cosmic[/gold] card you play costs 0 {Energy:energyIcons(1)}.",
+  "DIMENSIONSMOD-DARK_DESTROYER.title": "Dark Destroyer"
 }

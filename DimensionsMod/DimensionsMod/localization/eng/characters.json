@@ -1,3 +1,16 @@
 {
-  
+  "DIMENSIONSMOD-DIMENSIONS_MOD.aromaPrinciple": "Lore",
+  "DIMENSIONSMOD-DIMENSIONS_MOD.banter.alive.endTurnPing": "Co-op hurry up end turn ping message",
+  "DIMENSIONSMOD-DIMENSIONS_MOD.banter.dead.endTurnPing": "...",
+  "DIMENSIONSMOD-DIMENSIONS_MOD.cardsModifierDescription": "__ cards will now appear in rewards and shops.",
+  "DIMENSIONSMOD-DIMENSIONS_MOD.cardsModifierTitle": "__ Cards",
+  "DIMENSIONSMOD-DIMENSIONS_MOD.description": "Character Selection\nScreen Description",
+  "DIMENSIONSMOD-DIMENSIONS_MOD.eventDeathPrevention": "Co-op survival line",
+  "DIMENSIONSMOD-DIMENSIONS_MOD.goldMonologue": "Line spoken when obtaining a large amount of gold",
+  "DIMENSIONSMOD-DIMENSIONS_MOD.possessiveAdjective": "his/her/its",
+  "DIMENSIONSMOD-DIMENSIONS_MOD.pronounObject": "him/her/it",
+  "DIMENSIONSMOD-DIMENSIONS_MOD.pronounPossessive": "his/hers/its",
+  "DIMENSIONSMOD-DIMENSIONS_MOD.pronounSubject": "he/she/it",
+  "DIMENSIONSMOD-DIMENSIONS_MOD.title": "The DimensionsMod",
+  "DIMENSIONSMOD-DIMENSIONS_MOD.titleObject": "The DimensionsMod"
 }
