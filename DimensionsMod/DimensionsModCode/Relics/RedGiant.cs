@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -18,16 +17,16 @@ public sealed class RedGiant : DimensionsModRelic
     
     public override Decimal ModifyHandDraw(Player player, Decimal count)
     {
-        return player != Owner || player.Creature.CombatState.RoundNumber > 1 ? count : count + 1;
+        return player != Owner || player.Creature.CombatState is { RoundNumber: > 1 } ? count : count + 1;
     }
 
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
         RedGiant source = this;
-        if (player != Owner || source.Owner.Creature.CombatState.RoundNumber > 1) 
+        if (player != Owner || source.Owner.Creature.CombatState is { RoundNumber: > 1 }) 
             return;
         CardPile pile = PileType.Hand.GetPile(source.Owner);
-        CardModel card = source.Owner.RunState.Rng.CombatCardSelection.NextItem<CardModel>((IEnumerable<CardModel>) pile.Cards);
+        CardModel? card = source.Owner.RunState.Rng.CombatCardSelection.NextItem(pile.Cards);
         if (card == null)
             return;
         await CardCmd.Exhaust(choiceContext, card);

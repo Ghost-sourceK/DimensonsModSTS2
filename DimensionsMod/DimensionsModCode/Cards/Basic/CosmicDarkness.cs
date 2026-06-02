@@ -21,7 +21,8 @@ public sealed class CosmicDarkness : DimensionsModCardModel
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await CommonActions.CardAttack(this, cardPlay).WithHitFx("vfx/vfx_attack_blunt").Execute(choiceContext);
+        await CommonActions.CardAttack(this, cardPlay).WithHitFx("vfx/vfx_starry_impact").Execute(choiceContext);
+        
         var drawnCards = await CommonActions.Draw(this, choiceContext);
         foreach (var card in drawnCards)
         {

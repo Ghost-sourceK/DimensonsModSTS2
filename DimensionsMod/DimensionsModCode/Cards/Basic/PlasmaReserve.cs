@@ -22,10 +22,11 @@ public sealed class PlasmaReserve : DimensionsModCardModel
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CommonActions.CardBlock(this, cardPlay);
+        
         var drawnCards = await CommonActions.Draw(this, choiceContext);
         foreach (var card in drawnCards)
         {
-            await DimensionDrawSystem.OnCardDrawn(card, choiceContext, Owner, DimensionType.Cosmic);
+            await DimensionDrawSystem.OnCardDrawn(card, choiceContext, Owner, DimensionType.Plasma);
         }
     }
 }

@@ -61,7 +61,8 @@
 
     <ItemGroup>
         <Folder Include="DimensionsModCode\Cards\Ancients\" />
-        <Folder Include="DimensionsModCode\Cards\Rare\" />
+        <Folder Include="DimensionsModCode\Cards\Multiplayer\" />
+        <Folder Include="DimensionsModCode\Patches\" />
         <Folder Include="DimensionsMod\images\card_portraits\big\"/>
         <Folder Include="DimensionsMod\images\powers\big\"/>
         <Folder Include="DimensionsMod\images\relics\big\"/>

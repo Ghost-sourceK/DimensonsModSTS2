@@ -6,7 +6,7 @@ namespace DimensionsMod.DimensionsModCode.KeyWords;
 
 public static class ConsumeKeyWord
 {
-    [CustomEnum] [KeywordProperties(AutoKeywordPosition.After)]
+    [CustomEnum]
     public static CardKeyword Consume;
     
     public static bool IsConsume(this CardModel card)

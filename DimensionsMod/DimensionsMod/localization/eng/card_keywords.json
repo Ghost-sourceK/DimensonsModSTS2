@@ -2,13 +2,21 @@
   "DIMENSIONSMOD-VOID.description": "Draw X cards. If you draw a card with the same Prefix, gain 1 [gold]Energy[/gold], this only happens one time per card. Different cards are [gold]Exhausted[/gold] upon draw.",
   "DIMENSIONSMOD-VOID.title": "Void",
   
-  "DIMENSIONSMOD-EXHUME.description": "Put a card from your [gold]Exhaust[/gold] pile into your hand. If it's a [gold]Status[/gold] card, [gold]Purge[/gold] it.",
+  "DIMENSIONSMOD-EXHUME.description": "Put a card from your [gold]Exhaust[/gold] pile into your hand. If it's a [red]Status[/red] or [red]Curse[/red] card, [gold]Purge[/gold] it.",
   "DIMENSIONSMOD-EXHUME.title": "Exhume",
 
   "DIMENSIONSMOD-PURGE.description": "Removed until end of combat. Does [red]NOT[/red] go in your [gold]Exhaust[/gold] pile.",
   "DIMENSIONSMOD-PURGE.title": "Purge",
 
   "DIMENSIONSMOD-CONSUME.description": "When [gold]Exhausted[/gold] always [gold]Purge[/gold].",
-  "DIMENSIONSMOD-CONSUME.title": "Consume"
+  "DIMENSIONSMOD-CONSUME.title": "Consume",
   
+  "DIMENSIONSMOD-ASTRAL.description": "If this card is in your [gold]Hand[/gold] at the end of this turn, it is [gold]Purged[/gold]. Cards Purged this way do not trigger any effects that activate upon being Purged.",
+  "DIMENSIONSMOD-ASTRAL.title": "Astral",
+
+  "DIMENSIONSMOD-AUTOPLAY.description": "This card automatically play itself when drawn.",
+  "DIMENSIONSMOD-AUTOPLAY.title": "Autoplay",
+
+  "DIMENSIONSMOD-SCRY.description": "Look at the top X cards of your draw pile. You may discard any of them.",
+  "DIMENSIONSMOD-SCRY.title": "Scry"
 }

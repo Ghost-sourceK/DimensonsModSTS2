@@ -3,6 +3,9 @@ using BaseLib.Extensions;
 using DimensionsMod.DimensionsModCode.Character;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using DimensionsMod.DimensionsModCode.Extensions;
+using DimensionsMod.DimensionsModCode.Utility;
+using MegaCrit.Sts2.Core.Entities.Players;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
 namespace DimensionsMod.DimensionsModCode.Abstract;
 
@@ -26,6 +29,11 @@ public abstract class DimensionsModCardModel(
     public bool HasDimensionTag(DimensionType tag)
     {
         return DimensionTags.Contains(tag);
+    }
+    
+    public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
+    {
+        DimensionDrawSystem.ResetTurn();
     }
     
     //Image size:

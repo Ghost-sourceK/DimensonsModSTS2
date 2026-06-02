@@ -1,5 +1,13 @@
 {
   "DIMENSIONSMOD-FREE_DIMENSION_POWER.description": "The next Plasma or Cosmic card it's free to play",
   "DIMENSIONSMOD-FREE_DIMENSION_POWER.smartDescription": "The next Plasma or Cosmic card it's free to play",
-  "DIMENSIONSMOD-FREE_DIMENSION_POWER.title": "Free Dimension"
+  "DIMENSIONSMOD-FREE_DIMENSION_POWER.title": "Free Dimension",
+
+  "DIMENSIONSMOD-DOUBLE_PLAY_POWER.description": "The next Dark card is played an extra time",
+  "DIMENSIONSMOD-DOUBLE_PLAY_POWER.smartDescription": "The next Dark card is played an extra time",
+  "DIMENSIONSMOD-DOUBLE_PLAY_POWER.title": "Double Play",
+
+  "DIMENSIONSMOD-PLASMA_FORM_POWER.description": "At the start of each turn Exhume and Exhaust a card in your hand",
+  "DIMENSIONSMOD-PLASMA_FORM_POWER.smartDescription": "At the start of each turn Exhume and Exhaust a card in your hand",
+  "DIMENSIONSMOD-PLASMA_FORM_POWER.title": "Plasma Form"
 }
