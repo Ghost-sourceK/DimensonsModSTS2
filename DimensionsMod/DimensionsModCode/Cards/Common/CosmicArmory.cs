@@ -18,8 +18,8 @@ public sealed class CosmicArmory : DimensionsModCardModel
         WithDamage(5, 2);
         WithDimensionTags(DimensionType.Cosmic);
         WithTip(CardKeyword.Exhaust);
-        WithKeyword(ConsumeKeyWord.Consume, UpgradeType.Remove);
-        WithTip(PurgeKeyWord.Purge);
+        WithKeyword(DimensionModKeyWords.Consume, UpgradeType.Remove);
+        WithTip(DimensionModKeyWords.Purge);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

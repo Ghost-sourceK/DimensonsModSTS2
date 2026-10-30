@@ -1,3 +1,6 @@
+using BaseLib.Cards.Variables;
+using BaseLib.Commands;
+using BaseLib.Extensions;
 using BaseLib.Utils;
 using DimensionsMod.DimensionsModCode.Abstract;
 using DimensionsMod.DimensionsModCode.Character;
@@ -13,16 +16,15 @@ public sealed class CosmicTranscendence : DimensionsModCardModel
 {
     public CosmicTranscendence() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
-        WithCards(3, 1);
-        WithVar("scry", 5, 1);
+        WithCards(2, 1);
+        WithVar(new ScryVar(4).WithUpgrade(1));
         WithDimensionTags(DimensionType.Cosmic);
-        WithTip(VoidKeyWord.Void);
-        WithTip(ScryKeyWord.Scry);
+        WithTip(DimensionModKeyWords.Void);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await ScryCmd.Execute(choiceContext, Owner, DynamicVars["scry"].IntValue);
+        await ScryCmd.Execute(choiceContext, this);
         
         var drawnCards = await CommonActions.Draw(this, choiceContext);
         foreach (var card in drawnCards)

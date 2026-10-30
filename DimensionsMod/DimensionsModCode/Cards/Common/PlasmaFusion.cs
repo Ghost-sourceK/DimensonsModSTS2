@@ -1,6 +1,7 @@
 using BaseLib.Utils;
 using DimensionsMod.DimensionsModCode.Abstract;
 using DimensionsMod.DimensionsModCode.Character;
+using DimensionsMod.DimensionsModCode.KeyWords;
 using DimensionsMod.DimensionsModCode.Utility;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -18,6 +19,7 @@ public sealed class PlasmaFusion : DimensionsModCardModel
         WithCards(0,1);
         WithEnergyTip();
         WithDimensionTags(DimensionType.Plasma);
+        WithTip(DimensionModKeyWords.Purge);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

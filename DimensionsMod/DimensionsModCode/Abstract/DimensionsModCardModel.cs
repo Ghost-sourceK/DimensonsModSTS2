@@ -3,19 +3,46 @@ using BaseLib.Extensions;
 using DimensionsMod.DimensionsModCode.Character;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using DimensionsMod.DimensionsModCode.Extensions;
+using DimensionsMod.DimensionsModCode.KeyWords;
 using DimensionsMod.DimensionsModCode.Utility;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
 namespace DimensionsMod.DimensionsModCode.Abstract;
 
-public abstract class DimensionsModCardModel(
-    int canonicalEnergyCost,
-    CardType type,
-    CardRarity rarity,
-    TargetType targetType,
-    bool shouldShowInCardLibrary = true) : ConstructedCardModel(canonicalEnergyCost, type, rarity, targetType, shouldShowInCardLibrary)
+public abstract class DimensionsModCardModel(int canonicalEnergyCost, CardType type, CardRarity rarity, TargetType targetType, bool shouldShowInCardLibrary = true) 
+    : ConstructedCardModel(canonicalEnergyCost, type, rarity, targetType, shouldShowInCardLibrary)
 {
+    //Image size:
+    //Normal art: 1000x760 (Using 500x380 should also work, it will simply be scaled.)
+    //Full art: 606x852
+    public override string CustomPortraitPath
+    {
+        get
+        {
+            string customPath = $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
+            
+            return Godot.ResourceLoader.Exists(customPath) ? customPath : VanillaArtPool.Get(Id.Entry, Rarity);
+        }
+    }
+
+    //Smaller variants of card images for efficiency:
+    //Smaller variant of full art: 250x350
+    //Smaller variant of normal art: 250x190
+
+    //Uses card_portraits/card_name.png as image path. These should be smaller images.
+    public override string PortraitPath
+    {
+        get
+        {
+            string customPath = $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+            
+            return Godot.ResourceLoader.Exists(customPath) ? customPath : VanillaArtPool.Get(Id.Entry, Rarity);
+        }
+    }
+    
+    public override string BetaPortraitPath => $"beta/{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+    
     private HashSet<DimensionType> DimensionTags { get; } = [];
 
     protected void WithDimensionTags(params DimensionType[] tags)
@@ -36,16 +63,16 @@ public abstract class DimensionsModCardModel(
         DimensionDrawSystem.ResetTurn();
     }
     
-    //Image size:
-    //Normal art: 1000x760 (Using 500x380 should also work, it will simply be scaled.)
-    //Full art: 606x852
-    public override string CustomPortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
+    public override async Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+    {
+        await base.AfterCardPlayed(choiceContext, cardPlay);
 
-    //Smaller variants of card images for efficiency:
-    //Smaller variant of full art: 250x350
-    //Smaller variant of normal art: 250x190
+        if (cardPlay.Card != this)
+            return;
 
-    //Uses card_portraits/card_name.png as image path. These should be smaller images.
-    public override string PortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
-    public override string BetaPortraitPath => $"beta/{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+        if (!Keywords.Contains(DimensionModKeyWords.Purge))
+            return;
+
+        await PurgeCardCmd.Purge(this);
+    }
 }

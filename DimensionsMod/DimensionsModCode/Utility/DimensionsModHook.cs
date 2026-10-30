@@ -26,9 +26,4 @@ public class DimensionsModHook
     {
         return combatState.IterateHookListeners().OfType<T>().Aggregate(seed, (current, model) => action(model, current));
     }
-
-    public static Task OnScryed(PlayerChoiceContext ctx, Player player, int amount, int discardedAmount)
-    {
-        return Dispatch<IOnScryed>(ctx, player, m => m.OnScryed(ctx, player, amount, discardedAmount));
-    }
 }

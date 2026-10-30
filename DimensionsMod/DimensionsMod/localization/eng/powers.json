@@ -9,5 +9,21 @@
 
   "DIMENSIONSMOD-PLASMA_FORM_POWER.description": "At the start of each turn Exhume and Exhaust a card in your hand",
   "DIMENSIONSMOD-PLASMA_FORM_POWER.smartDescription": "At the start of each turn Exhume and Exhaust a card in your hand",
-  "DIMENSIONSMOD-PLASMA_FORM_POWER.title": "Plasma Form"
+  "DIMENSIONSMOD-PLASMA_FORM_POWER.title": "Plasma Form",
+  
+  "DIMENSIONSMOD-COSMIC_ARCHITECT_POWER.description": "At the start of each turn shuffle a Dormant Star in the Exhaust pile",
+  "DIMENSIONSMOD-COSMIC_ARCHITECT_POWER.smartDescription": "At the start of each turn shuffle a Dormant Star in the Exhaust pile",
+  "DIMENSIONSMOD-COSMIC_ARCHITECT_POWER.title": "Cosmic Architect",
+
+  "DIMENSIONSMOD-PLASMA_FORGE_POWER.description": "Dormant Stars now hit ALL enemies.",
+  "DIMENSIONSMOD-PLASMA_FORGE_POWER.smartDescription": "Dormant Stars now hit ALL enemies.",
+  "DIMENSIONSMOD-PLASMA_FORGE_POWER.title": "Plasma Forge",
+
+  "DIMENSIONSMOD-COSMIC_PHANTOM_STAR_POWER.description": "Whenever you create a Dazed, shuffle a Dormant Star in the Exhaust pile.",
+  "DIMENSIONSMOD-COSMIC_PHANTOM_STAR_POWER.smartDescription": "Whenever you create a Dazed, shuffle a Dormant Star in the Exhaust pile.",
+  "DIMENSIONSMOD-COSMIC_PHANTOM_STAR_POWER.title": "Cosmic Phantom Star",
+
+  "DIMENSIONSMOD-STELLAR_CATACLYSM_POWER.description": "Whenever you Exhume a card, create a copy of it in the Exhaust Pile.",
+  "DIMENSIONSMOD-STELLAR_CATACLYSM_POWER.smartDescription": "Whenever you Exhume a card, create a copy of it in the Exhaust Pile.",
+  "DIMENSIONSMOD-STELLAR_CATACLYSM_POWER.title": "Stellar Cataclysm"
 }

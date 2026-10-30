@@ -16,9 +16,9 @@ public sealed class CosmicFlux : DimensionsModCardModel
     public CosmicFlux() : base(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
     {
         WithDamage(7, 1);
-        WithCards(2, 1);
+        WithPower<VulnerablePower>(2,1);
         WithDimensionTags(DimensionType.Cosmic);
-        WithTip(VoidKeyWord.Void);
+        WithTip(DimensionModKeyWords.Void);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -38,7 +38,7 @@ public sealed class CosmicFlux : DimensionsModCardModel
         
         if (cardPlay.Target != null && cosmicDrawn)
         {
-            await PowerCmd.Apply<VulnerablePower>(choiceContext, cardPlay.Target, DynamicVars.Cards.IntValue, Owner.Creature, this);
+            await PowerCmd.Apply<VulnerablePower>(choiceContext, cardPlay.Target, DynamicVars.Vulnerable.IntValue, Owner.Creature, this);
         }
     }
 }

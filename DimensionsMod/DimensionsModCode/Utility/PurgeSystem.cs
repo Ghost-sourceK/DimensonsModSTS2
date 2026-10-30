@@ -10,11 +10,7 @@ namespace DimensionsMod.DimensionsModCode.Utility;
 
 public static class PurgeSystem
 {
-    public static async Task<IEnumerable<CardModel>?> PurgeFromExhaust(
-        PlayerChoiceContext choiceContext,
-        Player owner,
-        int amount,
-        LocString prompt)
+    public static async Task<IEnumerable<CardModel>?> PurgeFromExhaust(PlayerChoiceContext choiceContext, Player owner, int amount, LocString prompt)
     {
         var pile = PileType.Exhaust.GetPile(owner);
 

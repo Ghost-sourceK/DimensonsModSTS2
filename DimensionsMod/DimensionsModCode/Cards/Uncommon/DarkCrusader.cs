@@ -18,7 +18,7 @@ public sealed class DarkCrusader : DimensionsModCardModel
     {
         WithDamage(12);
         WithCards(2, 1);
-        WithVar("debuffs", 1, 1);
+        WithVar("Debuffs", 1, 1);
         WithDimensionTags(DimensionType.Dark);
         WithTip(CardKeyword.Exhaust);
     }
@@ -29,8 +29,8 @@ public sealed class DarkCrusader : DimensionsModCardModel
 
         if (cardPlay.Target != null)
         {
-            await PowerCmd.Apply<WeakPower>(choiceContext, cardPlay.Target, DynamicVars["debuffs"].IntValue, Owner.Creature, this);
-            await PowerCmd.Apply<VulnerablePower>(choiceContext, cardPlay.Target, DynamicVars["debuffs"].IntValue, Owner.Creature, this);
+            await PowerCmd.Apply<WeakPower>(choiceContext, cardPlay.Target, DynamicVars["Debuffs"].IntValue, Owner.Creature, this);
+            await PowerCmd.Apply<VulnerablePower>(choiceContext, cardPlay.Target, DynamicVars["Debuffs"].IntValue, Owner.Creature, this);
         }
     }
     
@@ -41,6 +41,6 @@ public sealed class DarkCrusader : DimensionsModCardModel
         if (causedByEthereal)
             return;
         
-        var drawnCards = await CommonActions.Draw(this, choiceContext);
+        await CommonActions.Draw(this, choiceContext);
     }
 }

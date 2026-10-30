@@ -15,14 +15,14 @@ public sealed class CosmicExoplanet : DimensionsModCardModel
     public CosmicExoplanet() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
         WithBlock(7, 3);
-        WithCards(1);
+        WithVar("Exhume", 1);
         WithDimensionTags(DimensionType.Cosmic);
-        WithTip(ExhumeKeyWord.Exhume);
+        WithTip(DimensionModKeyWords.Exhume);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CommonActions.CardBlock(this, cardPlay);
-        await ExhumeSystem.ExhumeToHand(choiceContext, Owner, 1, new LocString("cards", "DIMENSIONSMOD-EXHAUST_SELECT_PROMPT"));
+        await ExhumeSystem.ExhumeToHand(choiceContext, Owner, DynamicVars["Exhume"].IntValue, new LocString("cards", "DIMENSIONSMOD-EXHAUST_SELECT_PROMPT"));
     }
 }

@@ -1,17 +1,17 @@
 using BaseLib.Utils;
 using DimensionsMod.DimensionsModCode.Abstract;
-using DimensionsMod.DimensionsModCode.Character;
 using DimensionsMod.DimensionsModCode.KeyWords;
 using DimensionsMod.DimensionsModCode.Utility;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace DimensionsMod.DimensionsModCode.Cards.Token;
 
-[Pool(typeof(DimensionsModCardPool))]
+[Pool(typeof(TokenCardPool))]
 public sealed class VoidParticles : DimensionsModCardModel
 {
     public VoidParticles() : base(-1, CardType.Skill, CardRarity.Token, TargetType.Self)
@@ -19,8 +19,8 @@ public sealed class VoidParticles : DimensionsModCardModel
         WithBlock(3, 1);
         WithCards(1, 1);
         WithKeywords(CardKeyword.Retain, CardKeyword.Unplayable);
-        WithTip(ConsumeKeyWord.Consume);
-        WithTip(PurgeKeyWord.Purge);
+        WithTip(DimensionModKeyWords.Consume);
+        WithTip(DimensionModKeyWords.Purge);
         WithTip(CardKeyword.Exhaust);
     }
     

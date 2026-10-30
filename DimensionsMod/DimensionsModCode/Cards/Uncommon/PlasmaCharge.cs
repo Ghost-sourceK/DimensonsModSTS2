@@ -16,6 +16,7 @@ public sealed class PlasmaCharge : DimensionsModCardModel
     {
         WithCards(3, 1);
         WithDimensionTags(DimensionType.Plasma);
+        WithTip(CardKeyword.Exhaust);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

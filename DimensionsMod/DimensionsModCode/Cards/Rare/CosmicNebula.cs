@@ -14,16 +14,16 @@ public sealed class CosmicNebula : DimensionsModCardModel
 {
     public CosmicNebula() : base(2, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
-        WithCards(3, 1);
+        WithVar("Exhume", 2, 1);
         WithDimensionTags(DimensionType.Cosmic);
         WithKeywords(CardKeyword.Retain, CardKeyword.Exhaust);
         WithEnergyTip();
-        WithTip(ExhumeKeyWord.Exhume);
+        WithTip(DimensionModKeyWords.Exhume);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await ExhumeSystem.ExhumeToHand
-            (choiceContext, Owner, DynamicVars.Cards.IntValue, new LocString("cards", "DIMENSIONSMOD-EXHAUST_SELECT_PROMPT"), reduceCost: true);
+            (choiceContext, Owner, DynamicVars["Exhume"].IntValue, new LocString("cards", "DIMENSIONSMOD-EXHAUST_SELECT_PROMPT"), reduceCost: true);
     }
 }

@@ -16,7 +16,7 @@ public sealed class PlasmaReserve : DimensionsModCardModel
         WithBlock(12, 4);
         WithCards(1);
         WithDimensionTags(DimensionType.Plasma);
-        WithTip(VoidKeyWord.Void);
+        WithTip(DimensionModKeyWords.Void);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

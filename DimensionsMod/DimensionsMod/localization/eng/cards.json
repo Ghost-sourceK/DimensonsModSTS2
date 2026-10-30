@@ -13,17 +13,30 @@
 
 
 
-  "DIMENSIONSMOD-EXHAUST_SELECT_PROMPT": "Choose a card from the Exhaust pile",
+  "DIMENSIONSMOD-EXHAUST_SELECT_PROMPT": "Choose a card from the Exhaust pile.",
   "DIMENSIONSMOD-PURGE_CARD_PROMPT": "Choose a card to Purge.",
   "DIMENSIONSMOD-PURGE_EXHAUST_PILE_PROMPT": "Choose a card to Purge from the Exhaust pile.",
+  "DIMENSIONSMOD-PLAY_EXHAUST_PILE_PROMPT": "Choose cards to Play from the Exhaust pile.",
+  
+  
+  
+  "DIMENSIONSMOD-OBLIVION_D_S.description": "[gold]Void[/gold] {Cards:diff()}.\nDeal {Damage:diff()} damage.\n[gold]Exhume[/gold] {Cards:diff()} cards.",
+  "DIMENSIONSMOD-OBLIVION_D_S.title": "Oblivion",
+
+  "DIMENSIONSMOD-STELLAR_CATACLYSM.description": "Whenever you [gold]Exhume[/gold] a card, create a copy of it in the [gold]Exhaust Pile[/gold].",
+  "DIMENSIONSMOD-STELLAR_CATACLYSM.title": "Stellar Cataclysm",
 
 
 
-  "DIMENSIONSMOD-MATTER_AGGREGATION.description": "[gold]Astral[/gold].\nWhen [gold]Consumed[/gold] gain {Block:diff()} [gold]Block[/gold] and gain .",
+
+  "DIMENSIONSMOD-MATTER_AGGREGATION.description": "When [gold]Consumed[/gold] gain {Block:diff()} [gold]Block[/gold] and gain {energyPrefix:energyIcons(1)}.",
   "DIMENSIONSMOD-MATTER_AGGREGATION.title": "Matter Aggregation",
 
   "DIMENSIONSMOD-VOID_PARTICLES.description": "When [gold]Consumed[/gold] gain {Block:diff()} [gold]Block[/gold] and draw {Cards:diff()} {IfUpgraded:show:cards|card}.",
   "DIMENSIONSMOD-VOID_PARTICLES.title": "Void Particles",
+
+  "DIMENSIONSMOD-DORMANT_STAR.description": "Cannot be [gold]Exhumed[/gold].\nDeal {Damage:diff()} damage{TargetType:choose(AllEnemies): to ALL enemies|}.\nGain {Block:diff()} [gold]Block[/gold].",
+  "DIMENSIONSMOD-DORMANT_STAR.title": "Dormant Star",
 
 
 
@@ -31,38 +44,62 @@
   "DIMENSIONSMOD-COSMIC_EXOPLANET.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Exhume[/gold].",
   "DIMENSIONSMOD-COSMIC_EXOPLANET.title": "Cosmic Exoplanet",
 
-  "DIMENSIONSMOD-PLASMA_RELEASE.description": "[gold]Void[/gold] {Cards:diff()}.\nGain {Block:diff()} [gold]Block[/gold].",
+  "DIMENSIONSMOD-PLASMA_RELEASE.description": "[gold]Void[/gold] {Cards:diff()}.\nDeal {Damage:diff()} damage to a random enemy.",
   "DIMENSIONSMOD-PLASMA_RELEASE.title": "Plasma Release",
 
   "DIMENSIONSMOD-COSMIC_ARMORY.description": "Deal {Damage:diff()} damage.\nWhen {IfUpgraded:show:[gold]Exhausted[/gold] or [gold]Purged[/gold]|[gold]Consumed[/gold]}, [gold]Upgrade[/gold] ALL cards in your Hand for the rest of the combat.",
   "DIMENSIONSMOD-COSMIC_ARMORY.title": "Cosmic Armory",
 
-  "DIMENSIONSMOD-DARK_ECPLIPSER.description": "Deal {Damage:diff()} damage to ALL enemies.\n[gold]Exhaust[/gold] a card in your Hand.",
+  "DIMENSIONSMOD-DARK_ECPLIPSER.description": "Deal {Damage:diff()} damage to ALL enemies.\nIf [gold]Exhausted[/gold], deal {DoubleDamage:diff()} damage to ALL enemies.",
   "DIMENSIONSMOD-DARK_ECPLIPSER.title": "Dark Ecplipser",
 
   "DIMENSIONSMOD-COSMIC_RAY.description": "Deal {Damage:diff()} damage.\nShuffle {IfUpgraded:show:[gold]Matter Aggregation+[/gold]|[gold]Matter Aggregation[/gold]} into your discard pile.",
   "DIMENSIONSMOD-COSMIC_RAY.title": "Cosmic Ray",
 
-  "DIMENSIONSMOD-PLASMA_SUPERNOVA.description": "Gain {Block:diff()} [gold]Block[/gold].\nIf [gold]Exhausted[/gold], [gold]Void[/gold] {Cards:diff()}.",
+  "DIMENSIONSMOD-PLASMA_SUPERNOVA.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Exhaust[/gold] a card in your Hand.",
   "DIMENSIONSMOD-PLASMA_SUPERNOVA.title": "Plasma Supernova",
 
   "DIMENSIONSMOD-DARK_MATTER.description": "When [gold]Exhausted[/gold] or [gold]Purged[/gold], gain {Block:diff()} [gold]Block[/gold] and deal {Damage:diff()} damage to a random enemy.",
   "DIMENSIONSMOD-DARK_MATTER.title": "Dark Matter",
 
-  "DIMENSIONSMOD-PLASMA_FUSION.description": "[gold]Purge[/gold] a card in your [gold]Exhaust[/gold] pile.\nGain {energyPrefix:energyIcons(1)}{IfUpgraded:show: and draw a card.|.}",
+  "DIMENSIONSMOD-PLASMA_FUSION.description": "[gold]Purge[/gold] a card in your [gold]Exhaust Pile[/gold].\nGain {energyPrefix:energyIcons(1)}{IfUpgraded:show: and draw a card|}.",
   "DIMENSIONSMOD-PLASMA_FUSION.title": "Plasma Fusion",
 
-  "DIMENSIONSMOD-COSMIC_FLUX.description": "[gold]Void[/gold].\nDeal {Damage:diff()} damage.\nIf the drawn card is [gold]Cosmic[/gold], apply {Cards:diff()} [gold]Vulnerable[/gold].",
+  "DIMENSIONSMOD-COSMIC_FLUX.description": "[gold]Void[/gold].\nDeal {Damage:diff()} damage.\nIf the drawn card is [gold]Cosmic[/gold], apply {IfUpgraded:show: 3|2} [gold]Vulnerable[/gold].",
   "DIMENSIONSMOD-COSMIC_FLUX.title": "Cosmic Flux",
 
-  "DIMENSIONSMOD-COSMIC_QUASAR.description": "[gold]Void[/gold].\nDeal {Damage:diff()} damage.\n[gold]Exhume[/gold].",
-  "DIMENSIONSMOD-COSMIC_QUASAR.title": "Cosmic Quasar",
+  "DIMENSIONSMOD-PLASMA_INFUSION.description": "[gold]Void[/gold].\nDeal {Damage:diff()} damage.\n[gold]Exhume[/gold].",
+  "DIMENSIONSMOD-PLASMA_INFUSION.title": "Plasma Infusion",
 
-  "DIMENSIONSMOD-DARK_WARP.description": "[gold]Exhume[/gold] {Cards:diff()} random cards.\nShuffle 2 [gold]Dazed[/gold] into the [gold]Exhaust[/gold] pile.",
+  "DIMENSIONSMOD-DARK_WARP.description": "[gold]Exhume[/gold] {Exhume:diff()} random cards.\nShuffle 2 [gold]Dazed[/gold] into the [gold]Exhaust Pile[/gold].\nIf [gold]Exhausted[/gold], deal {Damage:diff()} damage to a random enemy.",
   "DIMENSIONSMOD-DARK_WARP.title": "Dark Warp",
   
-  "DIMENSIONSMOD-PLASMA_RECURSION.description": "Deal {Damage:diff()} damage.\nIf [gold]Exhausted[/gold] shuffle this card in the Draw pile and increase damage by {IfUpgraded:show:4|3} this combat.",
-  "DIMENSIONSMOD-PLASMA_RECURSION.title": "Plasma Recursion",
+  "DIMENSIONSMOD-DARK_VEDMAK.description": "Deal {Damage:diff()} damage.\nIf [gold]Exhausted[/gold], shuffle this card in the draw pile and increase damage by {damageBonus:diff()} this combat.",
+  "DIMENSIONSMOD-DARK_VEDMAK.title": "Dark Vedmak",
+
+  "DIMENSIONSMOD-COSMIC_BLINK.description": "Gain {Block:diff()} [gold]Block[/gold].\nPlay and [gold]Purge[/gold] a random card from the [gold]Exhaust Pile[/gold].\nShuffle {dazed:diff()} [gold]Dazed[/gold] in the [gold]Exhaust Pile[/gold].",
+  "DIMENSIONSMOD-COSMIC_BLINK.title": "Cosmic Blink",
+
+  "DIMENSIONSMOD-PLASMA_SHIFT.description": "Deal {Damage:diff()} damage.\nPlay and [gold]Purge[/gold] a random card from the [gold]Exhaust Pile[/gold].\nShuffle {dazed:diff()} [gold]Dazed[/gold] in the [gold]Exhaust Pile[/gold].",
+  "DIMENSIONSMOD-PLASMA_SHIFT.title": "Plasma Shift",
+
+  "DIMENSIONSMOD-COSMIC_MEIOSIS.description": "Gain {Block:diff()} [gold]Block[/gold].\nShuffle {DormantStar:diff()} [gold]Dormant Star[/gold] into the [gold]Exhaust Pile[/gold].",
+  "DIMENSIONSMOD-COSMIC_MEIOSIS.title": "Cosmic Meiosis",
+
+  "DIMENSIONSMOD-DARK_ORACLE.description": "Draw 1 card.\nNext turn, draw 1 card.\nIf [gold]Exhausted[/gold], gain {Block:diff()} [gold]Block[/gold].",
+  "DIMENSIONSMOD-DARK_ORACLE.title": "Dark Oracle",
+
+  "DIMENSIONSMOD-DARK_HORIZON.description": "Gain {Block:diff()} [gold]Block[/gold].\nIf [gold]Exhausted[/gold], reduce this cost by {energyPrefix:energyIcons(1)} this combat.",
+  "DIMENSIONSMOD-DARK_HORIZON.title": "Dark Horizon",
+
+  "DIMENSIONSMOD-COSMIC_AEGIS.description": "[gold]Void[/gold].\nGain {Block:diff()} [gold]Block[/gold].\n[gold]Exhaust[/gold] a card in your Hand.",
+  "DIMENSIONSMOD-COSMIC_AEGIS.title": "Cosmic Aegis",
+
+  "DIMENSIONSMOD-PLASMA_RAY.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.\n[gold]Exhume[/gold]{IfUpgraded:show: {Exhume:diff()} cards|}.",
+  "DIMENSIONSMOD-PLASMA_RAY.title": "Plasma Ray",
+  
+  "DIMENSIONSMOD-PLASMA_DUPLICATION.description": "[gold]Autoplay[/gold].\nAdd {VoidParticles:diff()} [gold]Void Particles[/gold] to your Hand.",
+  "DIMENSIONSMOD-PLASMA_DUPLICATION.title": "Plasma Duplication",
 
 
 
@@ -70,37 +107,76 @@
   "DIMENSIONSMOD-DARK_DESTROYER.description": "Deal {Damage:diff()} damage.\nThe next [gold]Plasma[/gold] or [gold]Cosmic[/gold] card you play costs 0 {energyPrefix:energyIcons(1)}.",
   "DIMENSIONSMOD-DARK_DESTROYER.title": "Dark Destroyer",
 
-  "DIMENSIONSMOD-DARK_BATTLECRUISER.description": "Deal {Damage:diff()} damage.\n{IfUpgraded:show:[gold]Exhume[/gold] 2 cards|[gold]Exhume[/gold]}.",
+  "DIMENSIONSMOD-DARK_BATTLECRUISER.description": "Deal {Damage:diff()} damage.\n[gold]Exhaust[/gold] a card in your Hand.\nIf [gold]Exhausted[/gold], [gold]Exhume[/gold]{IfUpgraded:show: {Exhume:diff()} cards|}.",
   "DIMENSIONSMOD-DARK_BATTLECRUISER.title": "Dark Battlecruiser",
-  
-  "DIMENSIONSMOD-PLASMA_DUPLICATION.description": "[gold]Autoplay[/gold].\nAdd {Cards:diff()} [gold]Void Particles[/gold] to your Hand.",
-  "DIMENSIONSMOD-PLASMA_DUPLICATION.title": "Plasma Duplication",
   
   "DIMENSIONSMOD-PLASMA_STRIKE.description": "Deal {Damage:diff()} damage to a random enemy {Repeat:diff()} times.",
   "DIMENSIONSMOD-PLASMA_STRIKE.title": "Plasma Strike",
 
-  "DIMENSIONSMOD-PLASMA_SATURATION.description": "When [gold]Exhausted[/gold] or [gold]Purged[/gold], gain {StrengthPower:diff()} [gold]Strength[/gold] and {DexterityPower:diff()} [gold]Dexterity[/gold].",
+  "DIMENSIONSMOD-PLASMA_SATURATION.description": "When [gold]Consumed[/gold], gain {StrengthPower:diff()} [gold]Strength[/gold] and {DexterityPower:diff()} [gold]Dexterity[/gold].",
   "DIMENSIONSMOD-PLASMA_SATURATION.title": "Plasma Saturation",
   
-  "DIMENSIONSMOD-PLASMA_CONVERGENCE.description": "[gold]Void[/gold]{IfUpgraded:show: 2|}.\nDeal {Damage:diff()} damage.\nShuffle {Cards:diff()} [gold]Void Particles[/gold] into your draw pile.",
+  "DIMENSIONSMOD-PLASMA_CONVERGENCE.description": "[gold]Void[/gold]{IfUpgraded:show: 2|}.\nDeal {Damage:diff()} damage.\nShuffle {VoidParticles:diff()} [gold]Void Particles[/gold] into your [gold]Draw Pile[/gold].",
   "DIMENSIONSMOD-PLASMA_CONVERGENCE.title": "Plasma Convergence",
   
   "DIMENSIONSMOD-PLASMA_CHARGE.description": "Draw {Cards:diff()} cards.\n[gold]Exhaust[/gold] a card in your Hand.",
   "DIMENSIONSMOD-PLASMA_CHARGE.title": "Plasma Charge",
 
-  "DIMENSIONSMOD-DARK_CRUSADER.description": "Deal {Damage:diff()} damage.\nApply {IfUpgraded:show: 2|1} [gold]Weak[/gold].\nApply {IfUpgraded:show: 2|1} [gold]Vulnerable[/gold].\nIf [gold]Exhausted[/gold] draw {Cards:diff()} cards.",
+  "DIMENSIONSMOD-DARK_CRUSADER.description": "Deal {Damage:diff()} damage.\nApply {Debuffs:diff()} [gold]Weak[/gold].\nApply {Debuffs:diff()} [gold]Vulnerable[/gold].\nIf [gold]Exhausted[/gold], draw {Cards:diff()} cards.",
   "DIMENSIONSMOD-DARK_CRUSADER.title": "Dark Crusader",
 
-  "DIMENSIONSMOD-COSMIC_SINGULARITY.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\n[gold]Exhaust[/gold] 2 cards in your Hand.",
+  "DIMENSIONSMOD-COSMIC_SINGULARITY.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\n[gold]Exhaust[/gold] {Exhaust:diff()} cards in your Hand.",
   "DIMENSIONSMOD-COSMIC_SINGULARITY.title": "Cosmic Singularity",
   
-  "DIMENSIONSMOD-DARK_VANGUARD.description": "ALL enemies lose 6 [gold]Strength[/gold] this turn.\n[gold]Exhume[/gold] {Cards:diff()} cards",
+  "DIMENSIONSMOD-DARK_VANGUARD.description": "[gold]Exhume[/gold] {Exhume:diff()} cards.\nIf [gold]Exhausted[/gold], ALL enemies lose {Debuff:diff()} [gold]Strength[/gold] this turn.",
   "DIMENSIONSMOD-DARK_VANGUARD.title": "Dark Vanguard",
 
+  "DIMENSIONSMOD-COSMIC_COLLAPSE.description": "Deal {Damage:diff()} damage.\nShuffle {MatterAggregation:diff()} [gold]Matter Aggregation[/gold] into your [gold]Draw Pile[/gold].",
+  "DIMENSIONSMOD-COSMIC_COLLAPSE.title": "Cosmic Collapse",
+
+  "DIMENSIONSMOD-COSMIC_RESONANCE.description": "[gold]Void[/gold] {Cards:diff()}.\nGain {Block:diff()} [gold]Block[/gold].\n[gold]Exhume[/gold].",
+  "DIMENSIONSMOD-COSMIC_RESONANCE.title": "Cosmic Resonance",
+
+  "DIMENSIONSMOD-COSMIC_ARCHITECT.description": "At the start of each turn shuffle a {IfUpgraded:show:[gold]Dormant Star+[/gold]|[gold]Dormant Star[/gold]} in the [gold]Exhaust Pile[/gold].",
+  "DIMENSIONSMOD-COSMIC_ARCHITECT.title": "Cosmic Architect",
+
+  "DIMENSIONSMOD-PLASMA_EXTINCTION.description": "Gain {Energy:energyIcons()}.\n[gold]Exhaust[/gold] {Exhaust:diff()} cards in the [gold]Draw Pile[/gold].",
+  "DIMENSIONSMOD-PLASMA_EXTINCTION.title": "Plasma Extinction",
+
+  "DIMENSIONSMOD-COSMIC_WORMHOLE.description": "Deal {Damage:diff()} damage 2 times.\nAdd a 1{energyPrefix:energyIcons(1)} copy of this card into the [gold]Exhaust Pile[/gold] with [gold]Purge[/gold].",
+  "DIMENSIONSMOD-COSMIC_WORMHOLE.title": "Cosmic Wormhole",
+
+  "DIMENSIONSMOD-COSMIC_PURIFICATION.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Purge[/gold] {Purge:diff()} [gold]Status[/gold] cards from the [gold]Exhaust Pile[/gold].",
+  "DIMENSIONSMOD-COSMIC_PURIFICATION.title": "Cosmic Purification",
+
+  "DIMENSIONSMOD-PLASMA_RESURGENCE.description": "[gold]Exhume[/gold] {Exhume:diff()} cards.\nNext turn, draw {Cards:diff()} card.",
+  "DIMENSIONSMOD-PLASMA_RESURGENCE.title": "Plasma Resurgence",
+
+  "DIMENSIONSMOD-COSMIC_IGNITION.description": "Deal {Damage:diff()} damage.\nEnchant {Enchant:diff()} random [gold]Dormant Star[/gold] with [gold]Charged[/gold].",
+  "DIMENSIONSMOD-COSMIC_IGNITION.title": "Cosmic Ignition",
+
+  "DIMENSIONSMOD-COSMIC_SHIELD.description": "Gain {Block:diff()} [gold]Block[/gold].\nAdd {dazed:diff()} Dazed into your [gold]Draw Pile[/gold].",
+  "DIMENSIONSMOD-COSMIC_SHIELD.title": "Cosmic Shield",
+
+  "DIMENSIONSMOD-COSMIC_WINDS.description": "[gold]Void[/gold].\nDeal {Damage:diff()} damage.\nShuffle {DormantStar:diff()} [gold]Dormant Star[/gold] into the [gold]Exhaust Pile[/gold].",
+  "DIMENSIONSMOD-COSMIC_WINDS.title": "Cosmic Winds",
+
+  "DIMENSIONSMOD-COSMIC_ENTROPY.description": "Play and [gold]Purge[/gold] {PlayPurge:diff()} random cards from the [gold]Exhaust Pile[/gold].\nShuffle {dazed:diff()} [gold]Dazed[/gold] in the [gold]Exhaust Pile[/gold].",
+  "DIMENSIONSMOD-COSMIC_ENTROPY.title": "Cosmic Entropy",
+
+  "DIMENSIONSMOD-COSMIC_PHANTOM_STAR.description": "Whenever you create a Dazed this turn, shuffle a {IfUpgraded:show:[gold]Dormant Star+[/gold]|[gold]Dormant Star[/gold]} into the [gold]Exhaust Pile[/gold].",
+  "DIMENSIONSMOD-COSMIC_PHANTOM_STAR.title": "Cosmic Phantom Star",
+
+  "DIMENSIONSMOD-PLASMA_SHIMMER.description": "Deal {Damage:diff()} damage to ALL enemies.\n[gold]Exhaust[/gold] {Exhaust:diff()} cards in your Hand.\nShuffle {VoidParticles:diff()} [gold]Void Particles[/gold] into your [gold]Draw Pile[/gold].",
+  "DIMENSIONSMOD-PLASMA_SHIMMER.title": "Plasma Shimmer",
+
+  "DIMENSIONSMOD-PLASMA_BLAST.description": "[gold]Void[/gold] {Cards:diff()}.\nGain {Block:diff()} [gold]Block[/gold].\nIf{IfUpgraded:show: at least 1 card of those drawn is| the drawn card is} [gold]Plasma[/gold], apply {IfUpgraded:show: 2|1} [gold]Weak[/gold] to ALL enemies.",
+  "DIMENSIONSMOD-PLASMA_BLAST.title": "Plasma Blast",
+  
 
 
 
-  "DIMENSIONSMOD-COSMIC_TRANSCENDENCE.description": "[gold]Scry[/gold] {IfUpgraded:show:6|5}.\n[gold]Void[/gold] {Cards:diff()}.",
+  "DIMENSIONSMOD-COSMIC_TRANSCENDENCE.description": "[gold]Scry[/gold] {Scry:diff()}.\n[gold]Void[/gold] {Cards:diff()}.",
   "DIMENSIONSMOD-COSMIC_TRANSCENDENCE.title": "Cosmic Transcendence",
 
   "DIMENSIONSMOD-DARK_SANCTUARY.description": "This turn, your next {IfUpgraded:show:2 Dark cards are|Dark card is} played an extra time.",
@@ -109,6 +185,18 @@
   "DIMENSIONSMOD-PLASMA_FORM.description": "At the start of each turn [gold]Exhume[/gold] and [gold]Exhaust[/gold] a card in your Hand.",
   "DIMENSIONSMOD-PLASMA_FORM.title": "Plasma Form",
 
-  "DIMENSIONSMOD-COSMIC_NEBULA.description": "[gold]Exhume[/gold] {Cards:diff()} cards, they cost {energyPrefix:energyIcons(1)} less this turn.",
-  "DIMENSIONSMOD-COSMIC_NEBULA.title": "Cosmic Nebula"
+  "DIMENSIONSMOD-COSMIC_NEBULA.description": "[gold]Exhume[/gold] {Exhume:diff()} cards, they cost {energyPrefix:energyIcons(1)} less this turn.",
+  "DIMENSIONSMOD-COSMIC_NEBULA.title": "Cosmic Nebula",
+
+  "DIMENSIONSMOD-DARK_CARRIER.description": "Deal {Damage:diff()} damage.\nPlay and [gold]Purge[/gold] {PlayPurge:diff()} cards in the [gold]Exhaust Pile[/gold].\nIf [gold]Exhausted[/gold], shuffle {DarkMatter:diff()} [gold]Dark Matter[/gold] into your [gold]Draw Pile[/gold] with [gold]Ethereal[/gold].",
+  "DIMENSIONSMOD-DARK_CARRIER.title": "Dark Carrier",
+
+  "DIMENSIONSMOD-COSMIC_STARFORGE.description": "[gold]Dormant Stars[/gold] now hit ALL enemies.\nShuffle 3 {IfUpgraded:show:[gold]Dormant Stars+[/gold]|[gold]Dormant Stars[/gold]} in the [gold]Exhaust Pile[/gold].",
+  "DIMENSIONSMOD-COSMIC_STARFORGE.title": "Cosmic Starforge",
+
+  "DIMENSIONSMOD-PLASMA_RECOMBOBULATION.description": "[gold]Void[/gold] {Cards:diff()}.\nDeal {Damage:diff()} damage.\nShuffle {MatterAggregation:diff()}{IfUpgraded:show: [gold]Matter Aggregation+[/gold]| [gold]Matter Aggregation[/gold]} into your [gold]Draw Pile[/gold].",
+  "DIMENSIONSMOD-PLASMA_RECOMBOBULATION.title": "Plasma Recombobulation",
+
+  "DIMENSIONSMOD-PLASMA_DOUBLE_LAYER.description": "Copy your entire Hand into the [gold]Exhaust Pile[/gold], ALL copied cards gain [gold]Purge[/gold].",
+  "DIMENSIONSMOD-PLASMA_DOUBLE_LAYER.title": "Plasma Double Layer"
 }

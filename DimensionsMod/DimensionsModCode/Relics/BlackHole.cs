@@ -15,7 +15,7 @@ public sealed class BlackHole : DimensionsModRelic
 {
     public override RelicRarity Rarity => RelicRarity.Ancient;
 
-    public override Decimal ModifyHandDraw(Player player, Decimal count)
+    public override decimal ModifyHandDraw(Player player, decimal count)
     {
         return player != Owner || player.Creature.CombatState is { RoundNumber: > 1 } ? count : count + 2;
     }
@@ -25,7 +25,8 @@ public sealed class BlackHole : DimensionsModRelic
         BlackHole source = this;
         if (player != Owner || source.Owner.Creature.CombatState is { RoundNumber: > 1 })
             return;
-        List<CardModel> list = (await CardSelectCmd.FromHandForDiscard(choiceContext, source.Owner, new CardSelectorPrefs(source.SelectionScreenPrompt, 0, 1), null, source)).ToList<CardModel>();
+        var list = (await CardSelectCmd.FromHandForDiscard(choiceContext, source.Owner, 
+            new CardSelectorPrefs(source.SelectionScreenPrompt, 0, 1), null, source)).ToList();
         if (list.Count == 0)
             return;
         foreach (CardModel card in list)

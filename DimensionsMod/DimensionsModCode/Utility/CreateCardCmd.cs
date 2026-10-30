@@ -8,47 +8,47 @@ namespace DimensionsMod.DimensionsModCode.Utility;
 
 public class CreateCardCmd
 {
-    public static async Task<CardModel?> GiveCard<T>(Player player,
-        PileType pileType,
-        CardPilePosition pos = CardPilePosition.Bottom,
-        float animationTime = 0.6f,
-        CardPreviewStyle animationStyle = CardPreviewStyle.HorizontalLayout,
-        bool upgraded = false,
-        bool skipAnimation = false) where T : CardModel
+    public static async Task GiveCard<T>(Player player, PileType pileType, CardPilePosition pos = CardPilePosition.Bottom, float animationTime = 0.6f,
+        CardPreviewStyle animationStyle = CardPreviewStyle.HorizontalLayout, bool upgraded = false, bool skipAnimation = false) 
+        where T : CardModel
     {
         var combatState = player.Creature.CombatState;
-        if (combatState == null) return null;
+        if (combatState == null)
+            return;
+        
         var card = combatState.CreateCard(ModelDb.Card<T>(), player);
         if (upgraded)
             CardCmd.Upgrade(card);
+        
         var result = await CardPileCmd.AddGeneratedCardToCombat(card, pileType, player, pos);
-        if (skipAnimation) return card;
+        if (skipAnimation || pileType == PileType.Hand)
+            return;
+        
         CardCmd.PreviewCardPileAdd(result, animationTime, animationStyle);
-        return card;
     }
 
-    public static async Task GiveCards<T>(Player player,
-        int amount,
-        PileType pileType,
-        CardPilePosition pos = CardPilePosition.Bottom,
-        float animationTime = 0.6f,
-        CardPreviewStyle animationStyle = CardPreviewStyle.HorizontalLayout,
-        bool upgraded = false,
-        bool skipAnimation = false) where T : CardModel
+    public static async Task GiveCards<T>(Player player, int amount, PileType pileType, CardPilePosition pos = CardPilePosition.Bottom, float animationTime = 0.6f, 
+        CardPreviewStyle animationStyle = CardPreviewStyle.HorizontalLayout, bool upgraded = false, bool skipAnimation = false) 
+        where T : CardModel
     {
         var cardsToGive = new List<CardModel>();
         var combatState = player.Creature.CombatState;
-        if (combatState == null) return;
+        if (combatState == null)
+            return;
+        
         for (var i = 0; i < amount; i++)
         {
             var card = combatState.CreateCard(ModelDb.Card<T>(), player);
             if (upgraded)
                 CardCmd.Upgrade(card);
+            
             cardsToGive.Add(card);
         }
 
         var result = await CardPileCmd.AddGeneratedCardsToCombat(cardsToGive, pileType, player, pos);
-        if (skipAnimation || pileType == PileType.Hand) return;
+        if (skipAnimation || pileType == PileType.Hand)
+            return;
+        
         CardCmd.PreviewCardPileAdd(result, animationTime, animationStyle);
     }
 }

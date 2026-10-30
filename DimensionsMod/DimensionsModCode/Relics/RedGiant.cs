@@ -15,7 +15,7 @@ public sealed class RedGiant : DimensionsModRelic
 {
     public override RelicRarity Rarity => RelicRarity.Starter;
     
-    public override Decimal ModifyHandDraw(Player player, Decimal count)
+    public override decimal ModifyHandDraw(Player player, decimal count)
     {
         return player != Owner || player.Creature.CombatState is { RoundNumber: > 1 } ? count : count + 1;
     }
@@ -32,7 +32,7 @@ public sealed class RedGiant : DimensionsModRelic
         await CardCmd.Exhaust(choiceContext, card);
     }
 
-    public override RelicModel? GetUpgradeReplacement()
+    public override RelicModel GetUpgradeReplacement()
     {
         return ModelDb.Relic<BlackHole>();
     }

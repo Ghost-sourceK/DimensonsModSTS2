@@ -16,11 +16,16 @@ public sealed class DarkMatter : DimensionsModCardModel
     public DarkMatter() : base(-1, CardType.Attack, CardRarity.Common, TargetType.RandomEnemy)
     {
         WithDamage(7, 3);
-        WithBlock(5, 2);
+        WithBlock(4, 2);
         WithDimensionTags(DimensionType.Dark);
         WithKeywords(CardKeyword.Unplayable);
-        WithTip(PurgeKeyWord.Purge);
+        WithTip(DimensionModKeyWords.Purge);
         WithTip(CardKeyword.Exhaust);
+    }
+    
+    protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+    {
+        await CardCmd.Exhaust(choiceContext, this);
     }
 
     public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel cardModel, bool causedByEthereal)
@@ -35,10 +40,10 @@ public sealed class DarkMatter : DimensionsModCardModel
         {
             await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block.IntValue, ValueProp.SkipHurtAnim, null);
 
-            var target = CombatState.Enemies.FirstOrDefault(c => !c.IsDead);
-            if (target == null)
+            if (CombatState.HittableEnemies.Count == 0)
                 return;
-            await DamageCmd.Attack(DynamicVars.Damage.IntValue).FromCard(this).Targeting(target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+            await DamageCmd.Attack(DynamicVars.Damage.IntValue).FromCard(this, null).TargetingRandomOpponents(CombatState)
+                .WithHitFx("vfx/vfx_starry_impact").Execute(choiceContext);
         }
     }
 }

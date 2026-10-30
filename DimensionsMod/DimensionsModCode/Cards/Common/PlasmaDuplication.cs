@@ -14,19 +14,21 @@ namespace DimensionsMod.DimensionsModCode.Cards.Common;
 [Pool(typeof(DimensionsModCardPool))]
 public sealed class PlasmaDuplication : DimensionsModCardModel
 {
-    public PlasmaDuplication() : base(-1, CardType.Attack, CardRarity.Common, TargetType.Self)
+    public PlasmaDuplication() : base(-1, CardType.Skill, CardRarity.Common, TargetType.Self)
     {
-        WithCards(2,1);
+        WithVar("VoidParticles", 2,1);
         WithTip(typeof(VoidParticles));
-        WithKeywords(CardKeyword.Exhaust);
+        WithKeywords(CardKeyword.Exhaust, CardKeyword.Unplayable);
         WithDimensionTags(DimensionType.Plasma);
-        WithTip(AutoplayKeyWord.Autoplay);
+        WithTip(DimensionModKeyWords.Autoplay);
     }
     
     public override async Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel drawnCard, bool fromHandDraw)
     {
-        if (drawnCard != this) return;
-        await CreateCardCmd.GiveCards<VoidParticles>(Owner, DynamicVars.Cards.IntValue, PileType.Hand, animationTime: 0.1f);
+        if (drawnCard != this) 
+            return;
+        
+        await CreateCardCmd.GiveCards<VoidParticles>(Owner, DynamicVars["VoidParticles"].IntValue, PileType.Hand, animationTime: 0.1f);
         await CardCmd.Exhaust(choiceContext, this);
     }
 }

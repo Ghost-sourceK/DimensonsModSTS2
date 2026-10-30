@@ -2,6 +2,7 @@ using BaseLib.Utils;
 using DimensionsMod.DimensionsModCode.Abstract;
 using DimensionsMod.DimensionsModCode.Character;
 using DimensionsMod.DimensionsModCode.KeyWords;
+using DimensionsMod.DimensionsModCode.Utility;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
@@ -17,8 +18,9 @@ public sealed class PlasmaSaturation : DimensionsModCardModel
         WithPower<StrengthPower>(2, 1);
         WithPower<DexterityPower>(2, 1);
         WithKeywords(CardKeyword.Unplayable);
+        WithTip(DimensionModKeyWords.Consume);
         WithTip(CardKeyword.Exhaust);
-        WithTip(PurgeKeyWord.Purge);
+        WithTip(DimensionModKeyWords.Purge);
         WithDimensionTags(DimensionType.Plasma);
     }
     
@@ -36,5 +38,6 @@ public sealed class PlasmaSaturation : DimensionsModCardModel
             await CommonActions.ApplySelf<DexterityPower>(choiceContext, this);
         }
         
+        await PurgeCardCmd.Purge(this);
     }
 }

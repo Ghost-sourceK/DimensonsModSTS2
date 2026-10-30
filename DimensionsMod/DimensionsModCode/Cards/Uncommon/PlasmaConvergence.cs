@@ -4,7 +4,6 @@ using DimensionsMod.DimensionsModCode.Cards.Token;
 using DimensionsMod.DimensionsModCode.Character;
 using DimensionsMod.DimensionsModCode.KeyWords;
 using DimensionsMod.DimensionsModCode.Utility;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
@@ -17,9 +16,10 @@ public sealed class PlasmaConvergence : DimensionsModCardModel
     {
         WithDamage(14);
         WithCards(1, 1);
+        WithVar("VoidParticles", 1, 1);
         WithDimensionTags(DimensionType.Plasma);
         WithTip(typeof(VoidParticles));
-        WithTip(VoidKeyWord.Void);
+        WithTip(DimensionModKeyWords.Void);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -32,6 +32,6 @@ public sealed class PlasmaConvergence : DimensionsModCardModel
             await DimensionDrawSystem.OnCardDrawn(card, choiceContext, Owner, DimensionType.Plasma);
         }
         
-        await CreateCardCmd.GiveCards<VoidParticles>(Owner, DynamicVars.Cards.IntValue, PileType.Draw, animationTime: 0.1f);
+        await CreateCardCmd.GiveCards<VoidParticles>(Owner, DynamicVars["VoidParticles"].IntValue, PileType.Draw, CardPilePosition.Random, animationTime: 0.1f);
     }
 }

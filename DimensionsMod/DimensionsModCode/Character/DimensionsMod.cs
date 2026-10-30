@@ -25,6 +25,8 @@ public class DimensionsMod : PlaceholderCharacterModel
         ModelDb.Card<GalacticStrike>(),
         ModelDb.Card<GalacticStrike>(),
         ModelDb.Card<GalacticStrike>(),
+        ModelDb.Card<GalacticStrike>(),
+        ModelDb.Card<GalacticDefend>(),
         ModelDb.Card<GalacticDefend>(),
         ModelDb.Card<GalacticDefend>(),
         ModelDb.Card<GalacticDefend>(),

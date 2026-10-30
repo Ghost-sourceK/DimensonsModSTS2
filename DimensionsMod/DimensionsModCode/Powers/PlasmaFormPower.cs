@@ -26,18 +26,19 @@ public sealed class PlasmaFormPower : DimensionsModPower
         if (exhaustPile.Cards.Count == 0)
             return;
 
-        await ExhumeSystem.ExhumeToHand(choiceContext, player, 1, new LocString("cards", "DIMENSIONSMOD-EXHAUST_SELECT_PROMPT"));
+        await ExhumeSystem.ExhumeToHand(choiceContext, player, Amount, new LocString("cards", "DIMENSIONSMOD-EXHAUST_SELECT_PROMPT"));
 
         var hand = PileType.Hand.GetPile(player);
 
         if (hand.Cards.Count == 0)
             return;
 
-        var prefs = new CardSelectorPrefs(CardSelectorPrefs.ExhaustSelectionPrompt, 1);
+        var prefs = new CardSelectorPrefs(CardSelectorPrefs.ExhaustSelectionPrompt, Amount);
 
-        CardModel? selected = (await CardSelectCmd.FromHand(choiceContext, player, prefs, null, this)).FirstOrDefault();
-
-        if (selected != null)
-            await CardCmd.Exhaust(choiceContext, selected);
+        var selectedCards = (await CardSelectCmd.FromHand(choiceContext, player, prefs, null, this)).ToList();
+        foreach (CardModel card in selectedCards)
+        {
+            await CardCmd.Exhaust(choiceContext, card);
+        }
     }
 }

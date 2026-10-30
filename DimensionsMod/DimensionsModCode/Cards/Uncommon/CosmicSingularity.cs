@@ -16,16 +16,17 @@ public sealed class CosmicSingularity : DimensionsModCardModel
     {
         WithDamage(10, 4);
         WithBlock(10, 4);
-        WithCards(2);
+        WithVar("Exhaust", 2);
         WithDimensionTags(DimensionType.Cosmic);
+        WithTip(CardKeyword.Exhaust);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await CommonActions.CardAttack(this, cardPlay).WithHitFx("vfx/vfx_starry_impact").Execute(choiceContext);
         await CommonActions.CardBlock(this, cardPlay);
+        await CommonActions.CardAttack(this, cardPlay).WithHitFx("vfx/vfx_starry_impact").Execute(choiceContext);
         
-        CardSelectorPrefs prefs = new CardSelectorPrefs(CardSelectorPrefs.ExhaustSelectionPrompt, 2);
+        CardSelectorPrefs prefs = new CardSelectorPrefs(CardSelectorPrefs.ExhaustSelectionPrompt, DynamicVars["Exhaust"].IntValue);
         foreach (CardModel card in await CardSelectCmd.FromHand(choiceContext, Owner, prefs, null, this))
             await CardCmd.Exhaust(choiceContext, card);
     }

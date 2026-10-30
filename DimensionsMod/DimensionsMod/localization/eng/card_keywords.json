@@ -1,8 +1,8 @@
 {
-  "DIMENSIONSMOD-VOID.description": "Draw X cards. If you draw a card with the same Prefix, gain 1 [gold]Energy[/gold], this only happens one time per card. Different cards are [gold]Exhausted[/gold] upon draw.",
+  "DIMENSIONSMOD-VOID.description": "Draw X cards. If you draw a card with the same Prefix, gain 1 [gold]Energy[/gold], this only happens one time per card. Different cards are [gold]Exhausted[/gold] upon draw. Colorless cards are ignored.",
   "DIMENSIONSMOD-VOID.title": "Void",
   
-  "DIMENSIONSMOD-EXHUME.description": "Put a card from your [gold]Exhaust[/gold] pile into your hand. If it's a [red]Status[/red] or [red]Curse[/red] card, [gold]Purge[/gold] it.",
+  "DIMENSIONSMOD-EXHUME.description": "Put a card from your [gold]Exhaust[/gold] pile into your hand. If it's a [red]Status[/red] or [red]Curse[/red] card, [gold]Purge[/gold] it. Colorless cards are ignored.",
   "DIMENSIONSMOD-EXHUME.title": "Exhume",
 
   "DIMENSIONSMOD-PURGE.description": "Removed until end of combat. Does [red]NOT[/red] go in your [gold]Exhaust[/gold] pile.",
@@ -17,6 +17,9 @@
   "DIMENSIONSMOD-AUTOPLAY.description": "This card automatically play itself when drawn.",
   "DIMENSIONSMOD-AUTOPLAY.title": "Autoplay",
 
-  "DIMENSIONSMOD-SCRY.description": "Look at the top X cards of your draw pile. You may discard any of them.",
-  "DIMENSIONSMOD-SCRY.title": "Scry"
+  "DIMENSIONSMOD-HIGGSBOSON.description": "This card is considered Plasma, Cosmic and Dark",
+  "DIMENSIONSMOD-HIGGSBOSON.title": "Higgs Boson",
+
+  "DIMENSIONSMOD-CHARGED.description": "Draw 1 extra card.",
+  "DIMENSIONSMOD-CHARGED.title": "Charged"
 }

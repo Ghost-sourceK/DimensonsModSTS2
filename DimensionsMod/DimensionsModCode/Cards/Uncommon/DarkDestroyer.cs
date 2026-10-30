@@ -13,7 +13,7 @@ public sealed class DarkDestroyer : DimensionsModCardModel
 {
     public DarkDestroyer() : base(2, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
     {
-        WithDamage(14, 6);
+        WithDamage(12, 4);
         WithEnergyTip();
         WithDimensionTags(DimensionType.Dark);
     }

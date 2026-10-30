@@ -11,18 +11,19 @@ namespace DimensionsMod.DimensionsModCode.Cards.Common;
 [Pool(typeof(DimensionsModCardPool))]
 public sealed class PlasmaRelease : DimensionsModCardModel
 {
-    public PlasmaRelease() : base(1, CardType.Skill, CardRarity.Common, TargetType.Self)
+    public PlasmaRelease() : base(1, CardType.Attack, CardRarity.Common, TargetType.RandomEnemy)
     {
-        WithBlock(4, 2);
+        WithDamage(7, 3);
         WithCards(2);
         WithDimensionTags(DimensionType.Plasma);
         WithKeywords(CardKeyword.Exhaust);
-        WithTip(VoidKeyWord.Void);
+        WithTip(DimensionModKeyWords.Void);
     }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await CommonActions.CardBlock(this, cardPlay);
+        await CommonActions.CardAttack(this, cardPlay).WithHitFx("vfx/vfx_starry_impact").Execute(choiceContext);
+        
         var drawnCards = await CommonActions.Draw(this, choiceContext);
         foreach (var card in drawnCards)
         {
